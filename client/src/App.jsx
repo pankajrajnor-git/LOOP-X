@@ -12,7 +12,7 @@ import TrafficChart from './components/TrafficChart';
 import ChatbotWindow from './components/ChatbotWindow';
 import { ShieldCheck, ServerCrash, Database, AlertTriangle } from 'lucide-react';
 
-const API = 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
 function App() {
   const [metrics, setMetrics] = useState(null);
